@@ -1,148 +1,295 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Compass, Sparkles } from "lucide-react";
+import { ArrowRight, Compass, Users, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-beach.jpg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden hero-compass">
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Beautiful travel destination"
-          className="w-full h-full object-cover"
-          style={{ transform: "translateZ(0)" }}
-        />
-      </div>
+    <section
+      id="home"
+      className="relative min-h-screen overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.18) 100%), linear-gradient(to right, rgba(6, 4, 2, 0.72) 0%, rgba(6, 4, 2, 0.52) 22%, rgba(6, 4, 2, 0.28) 42%, rgba(6, 4, 2, 0.08) 62%, rgba(6, 4, 2, 0) 75%), url(${heroImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="relative z-10 flex min-h-screen items-center">
+        <div className="w-full max-w-[720px] px-4 sm:px-6 md:px-8 lg:px-16 py-24 text-left">
 
-      {/* Multi-layer overlay */}
-      <div className="hero-overlay absolute inset-0" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/65 via-transparent to-navy/35" />
-
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-1/2 top-1/2 w-72 h-72 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold/10" />
-        <div className="absolute left-1/2 top-1/2 w-44 h-44 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold/10 rotate-45" />
-        <div className="absolute left-10 top-28 w-24 h-24 rounded-full bg-gold/10 blur-3xl" />
-        <div className="absolute right-10 bottom-24 w-28 h-28 rounded-full bg-[#ffffff0d] blur-3xl" />
-      </div>
-
-      <div className="relative z-10 container mx-auto px-4 text-center pt-20">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="inline-flex items-center gap-2 mb-6 px-5 py-2 rounded-full border border-gold/30"
-          style={{ background: "hsla(220,45%,8%,0.55)", backdropFilter: "blur(14px)" }}
-        >
-          <Sparkles size={12} className="text-gold" />
-          <span className="font-body text-gold-light text-[10px] tracking-[0.35em] uppercase">
-            Premium Curated Travel Experiences
-          </span>
-          <Sparkles size={12} className="text-gold" />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 0.2 }}
-          className="premium-divider mb-8"
-        />
-
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="font-display text-4xl md:text-6xl lg:text-[5.2rem] font-bold mb-4 leading-[1.02] text-white shadow-[0_18px_45px_rgba(0,0,0,0.35)]"
-        >
-          Your compass to luxurious journeys
-        </motion.h1>
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.55 }}
-        >
-          <span
-            className="inline-block italic font-normal text-3xl md:text-5xl lg:text-[3.8rem] leading-[1.15] block mb-6 text-gold hero-subtitle"
-            style={{ fontFamily: "'Cormorant Garamond', serif" }}
+          {/* ── Main Heading ── */}
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.35 }}
+            className="font-display font-[900] text-[clamp(44px,4.6vw,62px)] leading-[0.93] tracking-[-0.02em] text-white"
+            style={{
+              textShadow:
+                "0 2px 4px rgba(0,0,0,0.65), 0 8px 24px rgba(0,0,0,0.6), 0 32px 80px rgba(0,0,0,0.5)",
+              WebkitTextStroke: "0.4px rgba(0,0,0,0.15)",
+            }}
           >
-            Crafted around your world of refined travel.
-          </span>
-        </motion.div>
+            <span className="block">Your compass to</span>
+            <span className="block">luxurious journeys</span>
+          </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="font-body text-foreground/90 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-8"
-        >
-          Discover journeys shaped by elegant design, thoughtful hospitality, and unforgettable destinations — every detail personalized for a luxurious experience.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.85 }}
-          className="inline-flex items-center justify-center gap-3 mb-12 text-[11px] uppercase tracking-[0.45em] hero-accent-line"
-        >
-          <Compass size={14} />
-          <span>Inspired by classic navigation and tailored luxury</span>
-        </motion.div>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
-        >
-          <Link
-            to="/packages"
-            className="inline-flex items-center gap-2 px-10 py-4 cta-gold text-secondary-foreground font-body font-semibold text-sm rounded-full tracking-[0.15em] uppercase hover:scale-105 transition-transform duration-300"
+          {/* ── Golden Italic Tagline ── */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.55 }}
+            className="mt-7 text-[clamp(19px,2.4vw,28px)] leading-[1.3] italic"
+            style={{
+              fontFamily: "'Cormorant Garamond', serif",
+              fontWeight: 500,
+              fontStyle: "italic",
+              color: "#F0C84A",
+              textShadow:
+                "0 0 28px rgba(240,194,58,0.38), 0 0 60px rgba(240,185,40,0.18), 0 12px 40px rgba(0,0,0,0.45), 0 28px 72px rgba(0,0,0,0.32)",
+              letterSpacing: "0.012em",
+            }}
           >
-            Explore Packages
-            <ArrowRight size={16} />
-          </Link>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-2 px-10 py-4 border border-gold/40 text-gold font-body font-semibold text-sm rounded-full tracking-[0.15em] uppercase hover:bg-gold hover:text-secondary-foreground transition-all duration-500 gold-border-glow"
-          >
-            Plan My Trip
-          </Link>
-        </motion.div>
+            <span className="block">Crafted around your world,</span>
+            <span className="block">not just travel.</span>
+          </motion.p>
 
-        {/* Trust indicators */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="flex items-center justify-center gap-8 sm:gap-12"
-        >
-          {[
-            { value: "2,000+", label: "Happy Travelers" },
-            { value: "50+", label: "Destinations" },
-            { value: "10+", label: "Years of Excellence" },
-          ].map((item, i) => (
-            <div key={i} className="text-center">
-              <div className="font-display text-gold font-bold text-xl md:text-2xl">{item.value}</div>
-              <div className="font-body text-primary-foreground/40 text-[9px] tracking-[0.2em] uppercase">{item.label}</div>
+          {/* ── Divider ── */}
+          <motion.div
+            initial={{ opacity: 0, scaleX: 0 }}
+            animate={{ opacity: 1, scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.68, ease: "easeOut" }}
+            className="mt-6 origin-left"
+            style={{
+              height: "1px",
+              width: "220px",
+              background:
+                "linear-gradient(to right, rgba(201,149,42,0.9), rgba(201,149,42,0.35), transparent)",
+              boxShadow: "0 0 8px rgba(201,149,42,0.25)",
+            }}
+          />
+
+          {/* ── Body Paragraph ── */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.8 }}
+            className="mt-6 max-w-[480px] text-[15px] leading-[1.9] text-white/88"
+            style={{
+              fontWeight: 400,
+              letterSpacing: "0.018em",
+              textShadow: "0 8px 28px rgba(0,0,0,0.38), 0 24px 64px rgba(0,0,0,0.28)",
+            }}
+          >
+            Discover journeys shaped by elegant design, thoughtful hospitality, and
+            unforgettable destinations — every detail personalized for a luxurious
+            experience.
+          </motion.p>
+
+          {/* ── Stats Row ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.95 }}
+            className="mt-11 flex flex-col gap-7 sm:flex-row sm:items-center"
+          >
+            {/* Stat 1 */}
+            <div className="flex items-center gap-4">
+              <div
+                className="flex h-11 w-11 items-center justify-center rounded-full text-[#F0C84A]"
+                style={{
+                  border: "1px solid rgba(240,194,58,0.28)",
+                  background:
+                    "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(201,149,42,0.08) 100%)",
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.1)",
+                }}
+              >
+                <Users size={20} />
+              </div>
+              <div style={{ lineHeight: 1 }}>
+                <p
+                  className="text-[33px] font-black text-white"
+                  style={{
+                    letterSpacing: "-0.02em",
+                    lineHeight: 1,
+                    textShadow: "0 4px 18px rgba(0,0,0,0.38)",
+                    background: "linear-gradient(180deg, #fff 30%, #e8d9b8 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  2,000+
+                </p>
+                <p
+                  className="mt-1 text-[11px] uppercase text-white/80"
+                  style={{
+                    letterSpacing: "2.2px",
+                    fontWeight: 600,
+                    textShadow: "0 4px 14px rgba(0,0,0,0.28)",
+                  }}
+                >
+                  Happy Travelers
+                </p>
+                <p
+                  className="mt-[3px] text-[11.5px] text-white/55"
+                  style={{ letterSpacing: "0.02em", fontWeight: 400 }}
+                >
+                  Trusted by explorers worldwide
+                </p>
+              </div>
             </div>
-          ))}
-        </motion.div>
+
+            {/* Divider */}
+            <span
+              className="hidden sm:block self-stretch"
+              style={{
+                width: "1px",
+                height: "52px",
+                background:
+                  "linear-gradient(to bottom, transparent, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.2) 60%, transparent)",
+              }}
+            />
+
+            {/* Stat 2 */}
+            <div className="flex items-center gap-4">
+              <div
+                className="flex h-11 w-11 items-center justify-center rounded-full text-[#F0C84A]"
+                style={{
+                  border: "1px solid rgba(240,194,58,0.28)",
+                  background:
+                    "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(201,149,42,0.08) 100%)",
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.1)",
+                }}
+              >
+                <MapPin size={20} />
+              </div>
+              <div style={{ lineHeight: 1 }}>
+                <p
+                  className="text-[33px] font-black text-white"
+                  style={{
+                    letterSpacing: "-0.02em",
+                    lineHeight: 1,
+                    textShadow: "0 4px 18px rgba(0,0,0,0.38)",
+                    background: "linear-gradient(180deg, #fff 30%, #e8d9b8 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  50+
+                </p>
+                <p
+                  className="mt-1 text-[11px] uppercase text-white/80"
+                  style={{
+                    letterSpacing: "2.2px",
+                    fontWeight: 600,
+                    textShadow: "0 4px 14px rgba(0,0,0,0.28)",
+                  }}
+                >
+                  Curated Destinations
+                </p>
+                <p
+                  className="mt-[3px] text-[11.5px] text-white/55"
+                  style={{ letterSpacing: "0.02em", fontWeight: 400 }}
+                >
+                  Handpicked for unique experiences
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* ── CTA Buttons ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 1.1 }}
+            className="mt-11 flex flex-col sm:flex-row items-start gap-4"
+          >
+            <Link
+              to="/packages"
+              className="inline-flex items-center justify-center rounded-full text-[13.5px] font-bold uppercase tracking-[2.8px] text-black transition-all duration-300"
+              style={{
+                padding: "15px 34px",
+                background:
+                  "linear-gradient(135deg, #D4A031 0%, #C9952A 40%, #B8821E 100%)",
+                boxShadow:
+                  "0 4px 20px rgba(201,149,42,0.45), 0 1px 0 rgba(255,255,255,0.22) inset, 0 -1px 0 rgba(0,0,0,0.18) inset",
+                letterSpacing: "2.6px",
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.background =
+                  "linear-gradient(135deg, #E0B040 0%, #D4A031 40%, #C9952A 100%)";
+                e.currentTarget.style.boxShadow =
+                  "0 6px 28px rgba(201,149,42,0.55), 0 1px 0 rgba(255,255,255,0.22) inset";
+                e.currentTarget.style.transform = "translateY(-1px)";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background =
+                  "linear-gradient(135deg, #D4A031 0%, #C9952A 40%, #B8821E 100%)";
+                e.currentTarget.style.boxShadow =
+                  "0 4px 20px rgba(201,149,42,0.45), 0 1px 0 rgba(255,255,255,0.22) inset, 0 -1px 0 rgba(0,0,0,0.18) inset";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            >
+              Explore Packages&nbsp;&nbsp;→
+            </Link>
+
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-full text-[13.5px] font-bold uppercase tracking-[2.8px] transition-all duration-300"
+              style={{
+                padding: "14px 34px",
+                border: "1.5px solid rgba(201,149,42,0.65)",
+                color: "#D4A031",
+                background: "rgba(201,149,42,0.06)",
+                backdropFilter: "blur(4px)",
+                boxShadow:
+                  "0 2px 16px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.06)",
+                letterSpacing: "2.6px",
+              }}
+              onMouseEnter={e => {
+                e.currentTarget.style.background =
+                  "linear-gradient(135deg, #D4A031 0%, #C9952A 40%, #B8821E 100%)";
+                e.currentTarget.style.color = "#000";
+                e.currentTarget.style.borderColor = "transparent";
+                e.currentTarget.style.transform = "translateY(-1px)";
+                e.currentTarget.style.boxShadow = "0 6px 24px rgba(201,149,42,0.4)";
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = "rgba(201,149,42,0.06)";
+                e.currentTarget.style.color = "#D4A031";
+                e.currentTarget.style.borderColor = "rgba(201,149,42,0.65)";
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow =
+                  "0 2px 16px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.06)";
+              }}
+            >
+              Plan My Trip
+            </Link>
+          </motion.div>
+        </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.a
-        href="#destinations"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer group"
+      {/* ── Bottom Bar ── */}
+      <div
+        className="absolute left-0 right-0 bottom-0 py-4"
+        style={{ borderTop: "1px solid rgba(201,149,42,0.22)" }}
       >
-        <span className="font-body text-primary-foreground/30 text-[9px] tracking-[0.3em] uppercase group-hover:text-gold/60 transition-colors">Scroll</span>
-        <div className="w-5 h-9 border border-primary-foreground/20 group-hover:border-gold/40 rounded-full flex justify-center pt-2 transition-colors">
-          <div className="w-1 h-1.5 bg-gold rounded-full" />
-        </div>
-      </motion.a>
+        <p
+          className="mx-auto max-w-[520px] text-center text-[10px] uppercase text-white/55"
+          style={{
+            letterSpacing: "4.5px",
+            textShadow: "0 8px 24px rgba(0,0,0,0.3)",
+            fontWeight: 500,
+          }}
+        >
+          ⊕ INSPIRED BY CLASSIC NAVIGATION
+          <span className="block" style={{ marginTop: "2px", letterSpacing: "4.5px" }}>
+            AND TAILORED LUXURY
+          </span>
+        </p>
+      </div>
     </section>
   );
 };

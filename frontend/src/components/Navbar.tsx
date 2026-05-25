@@ -29,8 +29,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
         scrolled
-          ? "bg-[#070b15]/95 backdrop-blur-xl shadow-2xl shadow-[#071020]/40 py-3 border-b border-gold/10"
-          : "bg-[#070b15]/40 backdrop-blur-xl py-6"
+          ? "bg-[#0A0805]/94 border-b border-white/10 py-3"
+          : "bg-black/15 border-b border-white/10 py-5"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
@@ -42,7 +42,7 @@ const Navbar = () => {
           </div>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 rounded-full bg-black/20 px-3 py-1.5">
           {navLinks.map((link) => {
             const isActive =
               location.pathname === link.href || (link.href !== "/" && location.pathname.startsWith(link.href));
@@ -50,16 +50,16 @@ const Navbar = () => {
               <Link
                 key={link.label}
                 to={link.href}
-                className={`relative font-body text-[11px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 pb-0.5 ${
-                  isActive ? "text-gold" : "text-foreground/90 hover:text-gold"
-                }`}
-              >
+                className={`relative font-body text-[11px] font-medium tracking-[0.2em] uppercase transition-colors duration-300 pb-1 ${
+                  isActive
+                    ? "text-[#D9B944] after:opacity-100"
+                    : "text-white/95 hover:text-[#D9B944]"
+                } after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:rounded-full after:bg-[#D9B944]/40 after:opacity-0 after:transition-opacity after:duration-300 after:shadow-[0_0_16px_rgba(217,185,68,0.18)]`}>
                 {link.label}
                 {isActive && (
                   <motion.span
                     layoutId="nav-underline"
-                    className="absolute -bottom-1 left-0 right-0 h-px"
-                    style={{ background: "linear-gradient(90deg, hsl(var(--gold)) 0%, hsl(var(--accent-red)) 100%)" }}
+                    className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#D9B944]"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
@@ -69,7 +69,7 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="ml-2 px-7 py-2.5 border border-gold/40 text-gold font-body text-[11px] font-semibold rounded-full hover:bg-gold hover:text-secondary-foreground transition-all duration-500 tracking-[0.15em] uppercase"
+            className="ml-2 inline-flex items-center justify-center rounded-full border border-[#C9952A] bg-transparent px-6 py-2.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-[#C9952A] transition-all duration-300 hover:bg-[#C9952A] hover:text-black"
           >
             Plan Trip
           </Link>
