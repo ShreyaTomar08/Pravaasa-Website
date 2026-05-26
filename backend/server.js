@@ -1,8 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 const https = require('https');
 
 const app = express();
@@ -22,7 +22,7 @@ app.use(cors());
 // }));
 app.use(express.json());
 
-const inquiriesLog = path.join(__dirname, 'inquiries.jsonl');
+// const inquiriesLog = path.join(__dirname, 'inquiries.jsonl');
 
 function httpRequest(urlString, options = {}, body = null) {
   return new Promise((resolve, reject) => {
@@ -229,11 +229,11 @@ app.post('/api/inquiry', async (req, res) => {
     return res.status(400).send('Missing required fields');
   }
 
-  try {
-    fs.appendFileSync(inquiriesLog, JSON.stringify({ receivedAt: new Date().toISOString(), inquiry }) + '\n');
-  } catch (e) {
-    console.warn('Failed to write inquiry log', e);
-  }
+  // try {
+  //   fs.appendFileSync(inquiriesLog, JSON.stringify({ receivedAt: new Date().toISOString(), inquiry }) + '\n');
+  // } catch (e) {
+  //   console.warn('Failed to write inquiry log', e);
+  // }
 
   let biginSuccess = false;
   try {
