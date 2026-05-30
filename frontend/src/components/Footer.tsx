@@ -73,9 +73,9 @@ const Footer = () => {
               <h4 className="font-body text-[11px] font-semibold footer-heading mb-6 tracking-[0.25em] uppercase">Contact</h4>
               <div className="flex flex-col gap-3">
                 <a href="mailto:pooja@pravaasa.org" className="font-body footer-link">pooja@pravaasa.org</a>
-                <a href="tel:+919818014755" className="font-body footer-link">+91 98180 14755</a>
+                <a href="tel:+919667884755" className="font-body footer-link">+91 96678 84755</a>
                 <a href="https://pravaasa.org" target="_blank" rel="noopener noreferrer" className="font-body footer-link">pravaasa.org</a>
-                <p className="font-body footer-text">New Delhi, India</p>
+                <p className="font-body footer-text">Gurgaon, India</p>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@ const Footer = () => {
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <p className="font-body text-[11px] footer-muted tracking-[0.15em]">
-              © {new Date().getFullYear()} Pravassa. All rights reserved.
+              © {new Date().getFullYear()} Pravassa by Pooja Khosla. All rights reserved.
             </p>
             <div className="flex gap-6">
               {[
