@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 
 const contactInfo = [
-  { icon: <Phone size={20} />, title: "Call Us", detail: "+91 98180 14755", sub: "Mon–Sat, 10AM–7PM IST" },
+  { icon: <Phone size={20} />, title: "Call Us", detail: "+91 96678 84755", sub: "Mon–Sat, 10AM–6PM IST" },
   { icon: <Mail size={20} />, title: "Email Us", detail: "pooja@pravaasa.org", sub: "We reply within 24 hours" },
-  { icon: <MapPin size={20} />, title: "Visit Us", detail: "New Delhi, India", sub: "By appointment only" },
-  { icon: <Clock size={20} />, title: "Working Hours", detail: "Mon–Sat, 10AM–7PM", sub: "Sunday by appointment" },
+  { icon: <MapPin size={20} />, title: "Visit Us", detail: "Gurgaon, India", sub: "By appointment only" },
+  { icon: <Clock size={20} />, title: "Working Hours", detail: "Mon–Sat, 10AM–6PM", sub: "Sunday by appointment" },
   { icon: <Send size={20} />, title: "Website", detail: "pravaasa.org", sub: "Visit us online" },
 ];
 
@@ -34,7 +34,7 @@ const Contact = () => {
                 <h2 className="font-display text-3xl font-bold text-foreground mb-4">Let's design your next unforgettable trip</h2>
                 <div className="w-12 h-px bg-gold/40 mb-6" />
                 <p className="font-body text-muted-foreground text-sm leading-relaxed">
-                  Share your travel aspirations and we’ll create a beautifully curated itinerary tailored just for you. Reach out for a warm, personal planning experience.
+                  Share your travel aspirations and we'll create a beautifully curated itinerary tailored just for you. Reach out for a warm, personal planning experience.
                 </p>
               </div>
 

@@ -66,7 +66,7 @@ const Terms = () => {
             <div>
               <h2 className="font-display text-xl font-bold text-foreground mb-3">8. Contact</h2>
               <p className="font-body text-muted-foreground text-sm leading-relaxed">
-                For any queries regarding these terms, please contact us at pooja@pravaasa.org or call +91 98180 14755.
+                For any queries regarding these terms, please contact us at pooja@pravaasa.org or call +91 96678 84755.
               </p>
             </div>
 

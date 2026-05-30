@@ -61,7 +61,7 @@ const Privacy = () => {
             <div>
               <h2 className="font-display text-xl font-bold text-foreground mb-3">7. Contact Us</h2>
               <p className="font-body text-muted-foreground text-sm leading-relaxed">
-                If you have questions about this Privacy Policy or wish to exercise your data rights, please contact us at pooja@pravaasa.org or call +91 98180 14755.
+                If you have questions about this Privacy Policy or wish to exercise your data rights, please contact us at pooja@pravaasa.org or call +91 96678 84755.
               </p>
             </div>
 

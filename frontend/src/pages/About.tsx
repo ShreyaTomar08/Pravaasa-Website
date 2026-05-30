@@ -15,7 +15,7 @@ const values = [
 const stats = [
   { icon: <Globe size={22} />, value: "50+", label: "Destinations" },
   { icon: <Heart size={22} />, value: "2,000+", label: "Happy Travelers" },
-  { icon: <Award size={22} />, value: "10+", label: "Years Experience" },
+  { icon: <Award size={22} />, value: "11+", label: "Years Experience" },
   { icon: <Users size={22} />, value: "98%", label: "Client Satisfaction" },
 ];
 
@@ -25,7 +25,7 @@ const About = () => {
       <Navbar />
       <PageHero
         title="About Pravassa"
-        subtitle="Our Story"
+        subtitle="By Pooja Khosla"
         description="We believe travel should inspire, rejuvenate, and create bonds that last a lifetime."
       />
 
@@ -38,7 +38,7 @@ const About = () => {
               <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Your Journey, <span className="italic text-gradient-gold" style={{ fontFamily: "'Cormorant Garamond', serif" }}>Our Passion</span></h2>
               <div className="w-12 h-px bg-gold/40 mb-8" />
               <p className="font-body text-muted-foreground leading-relaxed mb-5 text-sm">
-                Pravassa was born out of a deep love for exploration and a desire to share the world's most beautiful experiences with fellow travelers. What started as a small team of travel enthusiasts has grown into a trusted name in curated travel.
+                Founded by <span className="text-gold font-semibold">Pooja Khosla</span>, Pravassa was born out of a deep love for exploration and a desire to share the world's most beautiful experiences with fellow travelers. What started as a small team of travel enthusiasts has grown into a trusted name in curated travel.
               </p>
               <p className="font-body text-muted-foreground leading-relaxed mb-5 text-sm">
                 We specialize in crafting bespoke itineraries across India and beyond — from the misty hills of Kashmir to the golden deserts of Rajasthan, from Kerala's tranquil backwaters to Dubai's dazzling skyline. Every trip we design is a blend of careful research, local expertise, and genuine care.
@@ -53,7 +53,7 @@ const About = () => {
                 <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800" alt="Travel planning" className="w-full h-[450px] object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-navy-gradient rounded-2xl p-6 shadow-xl border border-gold/10">
-                <p className="font-display text-3xl font-bold text-gold mb-1">10+</p>
+                <p className="font-display text-3xl font-bold text-gold mb-1">11+</p>
                 <p className="font-body text-primary-foreground/60 text-xs tracking-widest uppercase">Years of Excellence</p>
               </div>
             </motion.div>
