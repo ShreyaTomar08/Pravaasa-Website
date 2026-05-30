@@ -15,7 +15,7 @@ const HeroSection = () => {
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover object-center"
-        style={{ filter: "saturate(0.82) brightness(0.92)" }}
+        style={{ filter: "saturate(0.65) brightness(0.85)" }}
       />
       {/* ── Overlays ── */}
       <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.18) 100%)" }} />
@@ -28,7 +28,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.35 }}
-            className="font-display font-[900] text-[clamp(54px,5.8vw,78px)] leading-[0.93] tracking-[-0.02em] text-white"
+            className="font-display font-[900] text-[clamp(44px,4.6vw,62px)] leading-[0.93] tracking-[-0.02em] text-white"
             style={{
               textShadow:
                 "0 2px 4px rgba(0,0,0,0.65), 0 8px 24px rgba(0,0,0,0.6), 0 32px 80px rgba(0,0,0,0.5)",
